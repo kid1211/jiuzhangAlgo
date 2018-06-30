@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10e4f69e-2f31-4498-a275-f52ef0ee7e2a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Joe Zheng/week 2/140. Fast Power/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Joe Zheng/week 2/74.First_Bad_Version.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Joe Zheng/week 2/75.Find_Peak_Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Joe Zheng/javaOutput/production/jiuzhangAlgo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Joe Zheng/javaOutput/production/jiuzhangAlgo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Joe Zheng/javaOutput/production/jiuzhangAlgo/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Joe Zheng/week 2/428.myPow/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/Joe Zheng/week 2/428.myPow/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Joe Zheng/week 2/74. First_Bad_Version.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Joe Zheng/week 2/75. Find Peak Element.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,12 +23,24 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Joe Zheng/week 2/428.myPow/Solution.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="75.Find_Peak_Element.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Joe Zheng/week 2/75.Find_Peak_Element.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="468">
+              <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#906#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="447. Search in a Big Sorted Array.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Joe Zheng/week 2/447. Search in a Big Sorted Array.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="631">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -36,12 +55,17 @@
       <list>
         <option value="$PROJECT_DIR$/Joe Zheng/week 2/447.searchBigSortedArray/Solution.java" />
         <option value="$PROJECT_DIR$/Joe Zheng/week 2/428.myPow/Solution.java" />
+        <option value="$PROJECT_DIR$/Joe Zheng/week 2/140. Fast Power/Solution.java" />
+        <option value="$PROJECT_DIR$/Joe Zheng/week 2/74. First_Bad_Version.py" />
+        <option value="$PROJECT_DIR$/Joe Zheng/week 2/75. Find Peak Element.py" />
+        <option value="$PROJECT_DIR$/Joe Zheng/week 2/75.Find_Peak_Element.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="2560" />
-    <option name="height" value="1440" />
+    <option name="height" value="1333" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -70,6 +94,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -93,20 +118,26 @@
               <item name="jiuzhangAlgo" type="462c0819:PsiDirectoryNode" />
               <item name="Joe Zheng" type="462c0819:PsiDirectoryNode" />
               <item name="week 2" type="462c0819:PsiDirectoryNode" />
+              <item name="140. Fast Power" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jiuzhangAlgo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jiuzhangAlgo" type="462c0819:PsiDirectoryNode" />
+              <item name="Joe Zheng" type="462c0819:PsiDirectoryNode" />
+              <item name="week 2" type="462c0819:PsiDirectoryNode" />
               <item name="428.myPow" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
@@ -191,10 +222,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1333" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Messages" order="1" weight="0.3295362" />
+      <window_info anchor="bottom" id="Messages" order="1" visible="true" weight="0.3295362" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -205,7 +237,7 @@
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1703125" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.1703125" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -213,10 +245,10 @@
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="right" id="Commander" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="5" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="4" />
     </layout>
   </component>
@@ -224,6 +256,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Joe Zheng/week 2/428.myPow/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Joe Zheng/week 2/447.searchBigSortedArray/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -236,8 +275,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Joe Zheng/week 2/428.myPow/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="-938">
+          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Joe Zheng/week 2/140. Fast Power/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="711">
+          <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Joe Zheng/week 2/74.First_Bad_Version.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Joe Zheng/week 2/75.Find_Peak_Element.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#906#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Joe Zheng/week 2/447. Search in a Big Sorted Array.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
@@ -298,6 +368,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

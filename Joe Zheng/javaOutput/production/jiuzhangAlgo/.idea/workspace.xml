@@ -18,10 +18,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Joe Zheng/week 2/447.searchBigSortedArray/Solution.java">
+        <entry file="file://$PROJECT_DIR$/Joe Zheng/week 2/428.myPow/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+            <state>
+              <caret selection-end-line="28" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -35,12 +35,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Joe Zheng/week 2/447.searchBigSortedArray/Solution.java" />
+        <option value="$PROJECT_DIR$/Joe Zheng/week 2/428.myPow/Solution.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="2560" />
-    <option name="height" value="1440" />
+    <option name="height" value="1333" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -92,7 +94,7 @@
               <item name="jiuzhangAlgo" type="462c0819:PsiDirectoryNode" />
               <item name="Joe Zheng" type="462c0819:PsiDirectoryNode" />
               <item name="week 2" type="462c0819:PsiDirectoryNode" />
-              <item name="447.searchBigSortedArray" type="462c0819:PsiDirectoryNode" />
+              <item name="428.myPow" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -193,18 +195,18 @@
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Messages" order="1" visible="true" weight="0.3295362" />
+      <window_info anchor="bottom" id="Messages" order="1" weight="0.3295362" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="1" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.2987013" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.29861677" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.1703125" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1703125" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -225,8 +227,18 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Joe Zheng/week 2/447.searchBigSortedArray/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        <state relative-caret-position="540">
+          <caret line="20" column="3" lean-forward="true" selection-start-column="2" selection-end-line="20" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#570#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Joe Zheng/week 2/428.myPow/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="28" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -247,7 +259,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
