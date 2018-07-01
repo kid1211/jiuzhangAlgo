@@ -23,6 +23,7 @@ public class Solution {
         while(left + 1 < right) {
             int mid = left + (right - left) /2;
             //System.out.println(nums[mid]);
+            // find first position of target 
             if(nums[mid] > nums[mid - 1]) {
                 if(nums[mid] > nums[mid + 1]) {
                     return nums[mid];

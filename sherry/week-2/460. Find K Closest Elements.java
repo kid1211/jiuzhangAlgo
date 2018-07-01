@@ -11,7 +11,7 @@
 // Challenge
 //
 // O(logn + k) time complexity.
-
+//TODO: need to re-write 
 public class Solution {
     /**
      * @param A: an integer array
@@ -57,6 +57,7 @@ public class Solution {
                 }
                 return resultArray;
             }
+            //isLeftCloser -> to a method
             if(Math.abs(A[left]-target) > Math.abs(A[right]-target)) {
                 resultArray[i] = A[right];
                 right++;

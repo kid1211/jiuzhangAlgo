@@ -24,10 +24,13 @@ public class Solution {
     public int searchBigSortedArray(ArrayReader reader, int target) {
         // write your code here
         // get the start point using target to define
-        int end = target;
+        int end = 1;
         int start = 0;
+        // Exponential Backoff ->
+        // arraylist size == campacity -> compacity * 2, release old memory in heap
+        // don't need to consider edge case(out of index/ out of bound) 2^31 will return if out of bound
         while(reader.get(end) < target) {
-            start = target;
+            start = end;
             end = end * 2;
         }
 
@@ -40,6 +43,7 @@ public class Solution {
         while(start +1 < end) {
             int mid = start + (end - start) / 2;
             if(reader.get(mid) == target) {
+                //could remove from code.
                 if((mid -1) < 0 || reader.get(mid -1) != target){
                     return mid;
                 }

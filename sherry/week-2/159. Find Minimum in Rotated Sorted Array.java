@@ -9,6 +9,7 @@
 // Example
 //
 // Given [4, 5, 6, 7, 0, 1, 2] return 0
+// TODO：need to re-write
 public class Solution {
     /**
      * @param nums: a rotated sorted array

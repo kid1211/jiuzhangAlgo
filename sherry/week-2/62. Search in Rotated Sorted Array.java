@@ -16,7 +16,9 @@
 //
 // Challenge
 //
-// O(logN) time
+// O(logN) time ->
+// only use one binary search ->
+// use end and start add more condition. based on location
 
 public class Solution {
     /**
