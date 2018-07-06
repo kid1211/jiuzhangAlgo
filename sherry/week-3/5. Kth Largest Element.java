@@ -33,6 +33,7 @@ class Solution {
         int pivot = nums[left];
         int i = left, j = right;
         while (i <= j) {
+          //NOTE: nums[i] > pivot not >=
             while (i <= j && nums[i] > pivot) {
                 i++;
             }
@@ -54,6 +55,57 @@ class Solution {
         if (left + k - 1 >= i) {
             return quickSelect(nums, i, right, k - (i - left));
         }
+        //NOTE: why hereis j+1 not j?
         return nums[j + 1];
+    }
+}
+
+
+public class Solution {
+     public int findKthLargest(int[] nums, int k) {
+         if (nums == null || nums.length == 0) {
+             return -1;
+         }
+         return helper (nums, nums.length - k + 1, 0, nums.length - 1);
+        //length - k + 1 convert the kth large to k'th small one
+      }
+     private int helper(int[] nums, int k, int start, int end) {
+         if (start == end) {
+             return nums[start];
+         }
+
+         int pos = partition(nums, start, end);
+         if (pos + 1 == k) {
+             return nums[pos];
+         } else if (pos + 1 > k) {
+             return helper (nums, k, start, pos - 1);
+         } else {
+             /*这个地方为什么是return 下一层递归的结果，因为需要的结果在下层／下下层递归中得到，
+　　        把这个值返回来交给最上面的一层*/
+             return helper (nums, k,  pos + 1, end);
+         }
+
+     }
+
+     public int partition(int[] nums, int l, int r) {
+        // 初始化左右指针和pivot
+        int left = l, right = r;
+        int pivot = nums[left];
+
+        // 进行partition
+        while (left < right) {
+            while (left < right && nums[right] >= pivot) {
+                right--;
+            }
+            nums[left] = nums[right];
+            while (left < right && nums[left] <= pivot) {
+                left++;
+            }
+            nums[right] = nums[left];
+        }
+
+        // 返还pivot点到数组里面
+        nums[left] = pivot;
+        return left;
     }
 }
