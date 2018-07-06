@@ -1,5 +1,5 @@
 class TwoSum:
-    twoSumArray = []
+    arrayList = []
     """
     @param: number: An integer
     @return: nothing
@@ -7,39 +7,18 @@ class TwoSum:
 
     def add(self, number):
         # write your code here
-        # search the location to insert
-        arrayLength = len(self.twoSumArray)
-        if(arrayLength <= 0):
-            self.twoSumArray.append(number)
+        # use insertion sorted
+        # nums = self.arrayList
+        # nums.append(number)
+        # # second argument is exclude
+        # for i in range(len(nums) - 2, -1, -1):
+        #     if nums[i] <= nums[i + 1]:
+        #         break
+        #     nums[i], nums[i + 1] = nums[i + 1], nums[i]
 
-        left = 0
-        right = arrayLength - 1
+        self.arrayList.append(number)
+        # print(self.arrayList)
 
-        while(left + 1 < right):
-            mid = left + (right - left) // 2
-            if(self.twoSumArray[mid] == number):
-                self.twoSumArray.insert(mid, number)
-            elif self.twoSumArray[mid] < number:
-                left = mid
-            else:
-                right = mid
-
-        # print('before')
-
-        # if arrayLength >7:
-        #     print([self.twoSumArray[left],self.twoSumArray[right]])
-        if number < self.twoSumArray[left]:
-            self.twoSumArray.insert(left, number)
-        elif number > self.twoSumArray[right]:
-            self.twoSumArray.insert(right + 1, number)
-        else:
-            self.twoSumArray.insert(right, number)
-        # return self.twoSumArray
-        # print('after')
-
-        # if self.twoSumArray != sorted(self.twoSumArray):
-        #     print (number)
-        #     print (self.twoSumArray)
     """
     @param: value: An integer
     @return: Find if there exists any pair of numbers which sum is equal to the value.
@@ -47,23 +26,33 @@ class TwoSum:
 
     def find(self, value):
         # write your code here
-        # for x in range(0, 30, 3):/
-        posIndex = 0
-        negIndex = len(self.twoSumArray) - 1
-
-        while(posIndex + 1 < negIndex):
-            currentSum = self.twoSumArray[posIndex] + \
-                self.twoSumArray[negIndex]
-            if(currentSum == value):
+        hash = {}
+        nums = self.arrayList
+        for i, num in enumerate(self.arrayList):
+            if value - num in hash:
                 return True
-            elif currentSum < value:
-                posIndex += 1
-            else:
-                negIndex -= 1
-
-        # if posIndex == negIndex:
-        currentSum = self.twoSumArray[posIndex] + self.twoSumArray[negIndex]
-        if(currentSum == value):
-            return True
+            hash[num] = i
 
         return False
+        # nums = self.arrayList
+        # length = len(nums)
+        # left = 0
+        # right = length - 1
+
+        # if length <= 1:
+        #     return False
+
+        # # cannot use <= because they need to add and get it
+        # while left < right:
+        #     while left < right and nums[left + 1] == nums[left]:
+        #         left += 1
+        #     while left < right and nums[right - 1] == nums[right]:
+        #         right -= 1
+
+        #     if nums[left] + nums[right] == value:
+        #         return True
+        #     elif nums[left] + nums[right] > value:
+        #         right -= 1
+        #     else:
+        #         left += 1
+        # return False
