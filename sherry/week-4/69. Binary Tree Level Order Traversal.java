@@ -26,49 +26,53 @@
 //
 // Challenge 2: Use DFS algorithm to do it.
 
+ /**
+  * Definition of TreeNode:
+  * public class TreeNode {
+  *     public int val;
+  *     public TreeNode left, right;
+  *     public TreeNode(int val) {
+  *         this.val = val;
+  *         this.left = this.right = null;
+  *     }
+  * }
+  */
 
-/**
- * Definition of TreeNode:
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
- * }
- */
+ public class Solution {
+     /**
+      * @param root: A Tree
+      * @return: Level order a list of lists of integer
+      */
+     public List<List<Integer>> levelOrder(TreeNode root) {
+         // write your code here
+         // diff from tree to graph is in tree, the nodes are in sequence, so we don't need set to track checked nodes
+         List<List<Integer>> result = new ArrayList();
+         if(root == null) {
+             return result;
+         }
+         //List<List<Integer>> result = new ArrayList();
+         Queue<TreeNode> nodeList = new LinkedList();
+         nodeList.offer(root);
+         while(!nodeList.isEmpty()) {
+             //using size to check the level length.
+             int size = nodeList.size();
+             ArrayList<Integer> level = new ArrayList();
+             for(int i = 0; i < size; i++) {
+                 TreeNode head = nodeList.poll();
+                 level.add(head.val);
+                 if(head.left != null) {
+                     nodeList.offer(head.left);
+                 }
+                 if(head.right != null) {
+                     nodeList.offer(head.right);
+                 }
+             }
+             result.add(level);
+         }
+     return result;
 
-public class Solution {
-    /**
-     * @param root: A Tree
-     * @return: Level order a list of lists of integer
-     */
-    public List<List<Integer>> levelOrder(TreeNode root) {
-        // write your code here
-        List<List<Integer>> result = new ArrayList();
-        Queue<TreeNode> nodeList = new LinkedList();
-        nodeList.offer(root);
-        while(!nodeList.isEmpty()) {
-            //using size to check the level length.
-            int size = nodeList.size();
-            ArrayList<Integer> level = new ArrayList();
-            for(int i = 0; i < size; i++) {
-                TreeNode head = nodeList.poll();
-                level.add(head.val);
-                if(head.left != null) {
-                    nodeList.offer(head.left);
-                }
-                if(head.right != null) {
-                    nodeList.offer(head.right);
-                }
-            }
-            result.add(level);
-        }
-    return result;
+     }
 
-    }
-
-}
+ }
 
 //TODO DFS
