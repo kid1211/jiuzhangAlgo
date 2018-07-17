@@ -1,38 +1,71 @@
 class Solution:
-    # @param {boolean[][]} grid a boolean 2D matrix
-    # @return {int} an integer
+    """
+    @param grid: a boolean 2D matrix
+    @return: an integer
+    """
+
     def numIslands(self, grid):
-        # Write your code here
-        m = len(grid)
-        if m == 0:
+        # write your code here
+
+        # exception
+        # number of rows
+        r = len(grid)
+        if r == 0:
             return 0
-        n = len(grid[0])
-        visit = [[False for i in range(n)]for j in range(m)]
+        # number of coloumns
+        c = len(grid[0])
 
-        def check(x, y):
-            if x >= 0 and x < m and y >= 0 and y < n and grid[x][y] and visit[x][y] == False:
-                return True
+        visited = [[False for _ in range(c)] for __ in range(r)]
+        # print(visited)
 
-        def bfs(x, y):
-            nbrow = [1, 0, -1, 0]
-            nbcol = [0, 1, 0, -1]
-            q = [(x, y)]
-            while len(q) > 0:
-                x = q[0][0]
-                y = q[0][1]
-                q.pop(0)
-                for k in range(4):
-                    newx = x + nbrow[k]
-                    newy = y + nbcol[k]
+        """
+        check outofbound, if it is 1, if it is visited
+        @param row and col: index to the location
+        @return: Boolean 
+        """
+        def check(row, col):
+            # print(row >= 0 and row < r)
+            # print(col >= 0 and col < c)
+            return (row >= 0 and row < r and
+                    col >= 0 and col < c and
+                    grid[row][col] and visited[row][col] == False)
+        """
+        mark the one's negibhor visited
+        @param row and col: index to the location
+        @return: nothing, 
+        """
+        def bfs(row, col):
+            travers = [
+                (1, 0),
+                (0, 1),
+                (-1, 0),
+                (0, -1)
+            ]
+
+            # points that need to be traversed
+            points = [(row, col)]
+            while len(points) > 0:
+                # take out the first one in that queue
+                _x = points[0][0]
+                _y = points[0][1]
+                points.pop(0)
+                for i in range(4):
+                    newx = _x + travers[i][0]
+                    newy = _y + travers[i][1]
                     if check(newx, newy):
-                        visit[newx][newy] = True
-                        q.append((newx, newy))
+                        # set the point to be visted, also add it into the queue
+                        # to continue travers
+                        print((newx, newy))
+                        visited[newx][newy] = True
+                        points.append((newx, newy))
 
-        count = 0
-        for row in range(m):
-            for col in range(n):
+        counts = 0
+        # find all 1
+        for row in range(r):
+            for col in range(c):
                 if check(row, col):
-                    visit[row][col] = True
+                    # c.append((row, col))
+                    visited[row][col] = True
                     bfs(row, col)
-                    count += 1
-        return count
+                    counts += 1
+        return counts
