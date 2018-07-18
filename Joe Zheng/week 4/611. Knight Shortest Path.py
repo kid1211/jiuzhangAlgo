@@ -24,32 +24,49 @@ class Solution:
         if rows <= 0 or cols <= 0:
             return -1
 
+        print('rows: ' + str(rows))
+        print('cols: ' + str(cols))
         # print(visited)
+        # print(grid[4][6])
 
         def checkValidMove(x, y):
-            return (x >= 0 and x < cols and
-                    y >= 0 and y < rows and
+            # print((x,y))
+            return (x >= 0 and x < rows and
+                    y >= 0 and y < cols and
                     grid[x][y] == 0)
 
-        import Queue
-        queue = Queue.Queue(maxsize=rows * cols)
-        queue.put(source)
-        steps = [(1, 2), (1, -2), (-1, 2), (-1, -2),
-                 (2, 1), (2, -1), (-2, 1), (-2, -1)]
+        import queue
+        q = queue.Queue(maxsize=rows * cols)
+
+        q.put(source)
+        deltas = [
+            Point(1, 2),
+            Point(1, -2),
+            Point(-1, 2),
+            Point(-1, -2),
+            Point(2, 1),
+            Point(2, -1),
+            Point(-2, 1),
+            Point(-2, -1)]
+
         counts = 0
-        while not queue.empty():
-            head = queue.get()
-            if (head.x, head.y) == (destination.x, destination.y):
-                break
-            for step in steps:
-                newx = head.x + step[0]
-                newy = head.y + step[1]
-                if checkValidMove(newx, newy):
-                    # counts += 1
-                    grid[newx][newy] = 1
-                    queue.put((newx, newy))
+
+        while not q.empty():
+            qSize = q.qsize()
+            for _ in range(qSize):
+                head = q.get()
+                # print(type(head))
+                # print(type(source))
+                # print(type(destination))
+                if (head.x, head.y) == (destination.x, destination.y):
+                    return counts
+                for d in deltas:
+                    newx = head.x + d.x
+                    newy = head.y + d.y
+                    if checkValidMove(newx, newy):
+                        # counts += 1
+                        grid[newx][newy] = 1
+                        q.put(Point(newx, newy))
             counts += 1
 
-        if counts > 0:
-            return counts
         return -1
