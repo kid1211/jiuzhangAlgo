@@ -91,3 +91,8 @@ public class Solution {
         return count;
     }
 }
+
+//dfs
+//空间复杂度都有可能是O(n)
+//深搜达到最坏情况，就会可能爆栈。 深搜的深度是n
+//union find

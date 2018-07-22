@@ -59,13 +59,14 @@ public class Solution {
 
         ArrayList<UndirectedGraphNode> nodes = getNodes(node);
 
-        //clone all points
+        //clone all points,store relaction of new and old nodes
         HashMap<UndirectedGraphNode, UndirectedGraphNode> mapping = new HashMap<>();
         for(UndirectedGraphNode n : nodes) {
             mapping.put(n, new UndirectedGraphNode(n.label));
         }
 
         //clone all edges
+        //for node, -> neighbor get edges
         for(UndirectedGraphNode n : nodes) {
             UndirectedGraphNode newNode = mapping.get(n);
             for (UndirectedGraphNode neighbor : n.neighbors) {
@@ -77,13 +78,14 @@ public class Solution {
         return mapping.get(node);
 
     }
-    //bfs
+    //bfs->5 min
     private ArrayList<UndirectedGraphNode> getNodes(UndirectedGraphNode node) {
         Queue<UndirectedGraphNode> queue = new LinkedList();
         Set<UndirectedGraphNode> set = new HashSet();
 
         // put first node in the queue
         queue.offer(node);
+        //hashmap is unique in memory reference 内存地址
         set.add(node);
         while(!queue.isEmpty()) {
             UndirectedGraphNode head = queue.poll();
@@ -97,3 +99,9 @@ public class Solution {
         return new ArrayList(set);
     }
 }
+
+//克隆每一个点和每一个bian deepcopy
+//using the known node to find all nodes
+//clone all Nodes
+//clone all edges
+//

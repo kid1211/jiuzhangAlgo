@@ -83,3 +83,9 @@ class Solution {
         return root;
     }
 }
+
+
+
+//
+//序列化过程： 用# 来补全所有的null 截止到最后一个有效数字
+//序列化过程： 

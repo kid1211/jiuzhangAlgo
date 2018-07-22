@@ -31,7 +31,9 @@ public class Solution {
             int size = dictQueue.size();
             for (int i = 0; i < size; i++) {
                 String word = dictQueue.poll();
+                //O((25*L)*L)
                 for (String nextWord: getNeighbors(word, dict)) {
+                    //O(L)
                     if (set.contains(nextWord)) {
                         continue;
                     }
@@ -58,6 +60,7 @@ public class Solution {
      // get connections with given word.
      // for example, given word = 'hot', dict = {'hot', 'hit', 'hog'}
      // it will return ['hit', 'hog']
+     // time complex = o(25*L)
     private List<String> getNeighbors(String word, Set<String> dict) {
       ArrayList<String> nextWords = new ArrayList<String>();
       for (char c = 'a'; c <= 'z'; c++) {

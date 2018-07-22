@@ -1,0 +1,6 @@
+It's more convention than anything else.
+
+T is meant to be a Type
+E is meant to be an Element (List<E>: a list of Elements)
+K is Key (in a Map<K,V>)
+V is Value (as a return value or mapped value)

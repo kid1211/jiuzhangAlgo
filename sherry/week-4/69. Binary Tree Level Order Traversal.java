@@ -75,4 +75,26 @@
 
  }
 
+public class Solution {
+  public List<List<Integer>> levelOrder(TreeNode node) {
+    //from last level extend to next levelOrder
+    currentLevel = initial first level
+    while(currentLevel != empty) {
+      for element in currentLevel {
+        extend next level
+      }
+      curnt level  = next level
+
+    }
+  }
+}
 //TODO DFS
+//iteration dfs
+//There's a level,  put the result in co-level search is still is dfs
+// B
+private void dfs(TreeNode node, int level, List<List<Integer>>) {
+  if (node == null) {
+    return;
+  }
+  if(result.size < level )
+}
