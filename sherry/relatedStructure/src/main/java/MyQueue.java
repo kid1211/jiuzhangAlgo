@@ -22,6 +22,8 @@ public class MyQueue<E> {
         tail = node;
     }
 
+
+
     public E deQueue() {
         QueueNode<E> temp = dummy.next;
         //System.out.println(temp.value);
