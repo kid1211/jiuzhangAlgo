@@ -2,6 +2,69 @@ import java.util.*;
 import java.util.regex.Pattern;
 
 public class Amazon {
+    /**
+     * @param s: A string
+     * @return: whether the string is a valid parentheses
+     */
+    public boolean isValidParentheses(String s) {
+        // write your code here
+        HashMap<Character, Character> matchMap = new HashMap<>();
+        matchMap.put(')', '(');
+        matchMap.put(']', '[');
+        matchMap.put('}', '{');
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < s.length(); i++) {
+            if (stack.isEmpty() || matchMap.get(s.charAt(i)) != stack.peek()) {
+                stack.push(s.charAt(i));
+            } else {
+                stack.pop();
+            }
+        }
+        return stack.isEmpty();
+    }
+
+    public int countPrimeSetBits(int L, int R) {
+        int ans = 0;
+        for (int x = L; x <= R; ++x)
+            if (isSmallPrime(Integer.bitCount(x)))
+                ans++;
+        return ans;
+    }
+
+    public boolean isSmallPrime(int x) {
+        return (x == 2 || x == 3 || x == 5 || x == 7 ||
+                x == 11 || x == 13 || x == 17 || x == 19);
+    }
+
+    /**
+     * @param n: n pairs
+     * @return: All combinations of well-formed parentheses
+     */
+    public List<String> generateParenthesis(int n) {
+        // write your code here
+        List<String> resultSet = new ArrayList<>();
+
+        if (n == 0) {
+            return resultSet;
+        }
+
+        parenthesisDfs(resultSet, "", n, n);
+        return resultSet;
+    }
+
+    private void parenthesisDfs(List<String> resultSet, String parent, int left, int right) {
+        if (left == 0 && right == 0) {
+            resultSet.add(parent);
+        }
+
+        if (left > 0) {
+            parenthesisDfs(resultSet, parent + "(", left - 1, right);
+        }
+        if (right > 0 && right > left) {
+            parenthesisDfs(resultSet, parent + ")", left, right - 1);
+        }
+
+    }
 
     public String[] logSort(String[] logs) {
         if (logs == null || logs.length == 0) {
