@@ -43,8 +43,4 @@ class Solution:
         if len(routes) == numCourses:
             return routes
         return []
-
-
-。
-
 # 直到队列为空时，算法结束，
