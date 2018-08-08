@@ -101,4 +101,55 @@ public class Amazon {
         }
         return result;
     }
+
+    //How to implement it in O(1)
+    /**
+     * @param head: The head of linked list with a random pointer.
+     * @return: A new head of a deep copy of the list.
+     */
+    public RandomListNode copyRandomList(RandomListNode head) {
+        // write your code here
+
+        if(head == null) {
+            return null;
+        }
+
+        RandomListNode dummy = new RandomListNode(-1);
+        RandomListNode prep, newNode;
+        prep = dummy;
+        Map<RandomListNode, RandomListNode> hashMap = new HashMap<>();
+        while(head != null) {
+            if(hashMap.containsKey(head)){
+                newNode = hashMap.get(head);
+            }else{
+                newNode = new RandomListNode(head.label);
+                hashMap.put(head, newNode);
+            }
+            prep.next = newNode;
+            //get randome
+            if(head.random != null) {
+                if(hashMap.containsKey(head.random)) {
+                    newNode.random = hashMap.get(head.random);
+                }else{
+                    newNode.random = new RandomListNode(head.random.label);
+                    hashMap.put(head.random, newNode.random);
+                }
+            }
+            prep = prep.next;
+            head = head.next;
+        }
+        return dummy.next;
+    }
+
+
+    private class RandomListNode {
+        int label;
+        RandomListNode next, random;
+
+        RandomListNode(int x) {
+            this.label = x;
+        }
+    }
+
+    ;
 }
