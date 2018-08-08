@@ -15,6 +15,17 @@ public class QuickSort {
         return quickSelect(nums, 0, nums.length - 1, k);
     }
 
+    /**
+     * @param k:    An integer
+     * @param nums: An integer array
+     * @return: kth smallest element
+     */
+    public int kthSmallest(int k, int[] nums) {
+        // write your code here
+        // to get Kth smallest  -> [1,2,3,4,5,6], kth smallest is length - k + 1 lar number
+        return quickSelect(nums, 0, nums.length - 1, nums.length - k + 1);
+    }
+
     public int median(int[] nums) {
         // write your code here
         if (nums == null) {
