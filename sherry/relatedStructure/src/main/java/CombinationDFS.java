@@ -164,4 +164,36 @@ public class CombinationDFS {
             }
         }
     }
+
+    protected void dfsWithWordSplit(String s, int startIndex, List<String> combination, List<List<String>> result) {
+        if (startIndex >= s.length()) {
+            result.add(new ArrayList(combination));
+            return;
+        }
+        // the idea here is :
+        // there's no for loop, only two combination.
+//        if (startIndex + 1 <= s.length()) {
+//            combination.add(s.substring(startIndex, startIndex + 1));
+//            dfsWithWordSplit(s, startIndex + 1, combination, result);
+//            combination.remove(combination.size() - 1);
+//        }
+//
+//        if (startIndex + 2 <= s.length()) {
+//            combination.add(s.substring(startIndex, startIndex + 2));
+//            dfsWithWordSplit(s, startIndex + 2, combination, result);
+//            combination.remove(combination.size() - 1);
+//        }
+//
+        //this part could replace by
+        // in this method, each for loop will run twice
+        // consider from last element back
+        for (int i = startIndex; i < startIndex + 2 && i < s.length(); i++) {
+            String subString = s.substring(startIndex, i + 1);
+            combination.add(subString);
+            dfsWithWordSplit(s, i + 1, combination, result);
+            combination.remove(combination.size() - 1);
+        }
+
+        return;
+    }
 }
