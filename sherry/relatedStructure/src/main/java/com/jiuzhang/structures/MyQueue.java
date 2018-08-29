@@ -1,3 +1,5 @@
+package com.jiuzhang.structures;
+
 /**
  * @param <E>
  */

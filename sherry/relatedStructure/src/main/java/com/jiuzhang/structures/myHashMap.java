@@ -1,3 +1,5 @@
+package com.jiuzhang.structures;
+
 public class myHashMap<T> {
 
     public <T> T get(String key) {

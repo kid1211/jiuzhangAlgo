@@ -1,3 +1,5 @@
+import com.jiuzhang.model.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -18,12 +20,4 @@ public class DeepCopy {
     }
 
 
-}
-
-class TreeNode {
-    int val;
-    TreeNode left, right;
-    public  TreeNode (int val) {
-        this.val = val;
-    }
 }
