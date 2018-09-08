@@ -32,18 +32,15 @@ class LRUCache:
         self.head.next = first.next
         self.hashmap[self.head.next.key] = self.head
 
-    def move2Tail(self, key):
-        if key is self.tail.key:
+    def move2Tail(self, prev):
+        node = prev.next
+        if node == self.tail:
             return
-        prev = self.hashmap[key]
-        curt = prev.next
-        prev.next = curt.next
-
-        # connect the link
-        if curt.next is not None:
-            self.hashmap[curt.next.key] = prev
-            curt.next = None
-        self.appendTail(curt)
+        prev.next = node.next
+        if node.next is not None:
+            self.hashmap[node.next.key] = prev
+            node.next = None
+        self.appendTail(node)
 
     """
     @param: key: An integer
@@ -53,7 +50,7 @@ class LRUCache:
     def get(self, key):
         # write your code here
         if key in self.hashmap:
-            self.move2Tail(key)
+            self.move2Tail(self.hashmap[key])
             # print(self.hashmap)
             return self.tail.value
         return -1
@@ -68,7 +65,7 @@ class LRUCache:
         # write your code here
 
         if key in self.hashmap:
-            self.move2Tail(key)
+            self.move2Tail(self.hashmap[key])
             self.tail.value = value
             return
 
